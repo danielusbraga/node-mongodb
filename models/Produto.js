@@ -1,9 +1,21 @@
 const mongoose = require('mongoose')
 
 const schema = mongoose.Schema({
-    nome: String,
-    preco: Number,
-    tamanho: String,
+    nome: {
+        type:String,
+        required: true,
+        maxLength: 10,
+        uppercase: true
+
+    },
+    preco: {
+        type: Int16Array,
+        required: true
+    },
+    tamanho: {
+        type: String,
+        required: true
+    }, 
     tipo: String
 })
 
